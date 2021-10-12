@@ -1,0 +1,43 @@
+package com.valtx.seleccion.model;
+
+import javax.annotation.Generated;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "sucursal")
+public class Sucursal {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Size(min = 2, max = 2, message = "{codigo.pattern}")
+	private String codSucursal;
+	
+	@Size(min=1, message = "{nombre.notnull}")
+	@Column(name = "nombre", nullable = false, length = 50)
+	private String nombre;
+
+	public String getCodSucursal() {
+		return codSucursal;
+	}
+
+	public void setCodSucursal(String codSucursal) {
+		this.codSucursal = codSucursal;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
+	
+}

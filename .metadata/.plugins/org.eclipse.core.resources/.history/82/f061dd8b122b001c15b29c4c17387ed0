@@ -1,0 +1,42 @@
+package com.valtx.seleccion.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ForeignKey;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "usuario")
+public class Usuario {
+	
+	@Id
+	@Size(min = 2, max = 2, message = "{codigo.pattern}")
+	private String codUsuario;
+	
+	/*
+
+	@ManyToOne
+	@JoinColumn(name = "cod_sucursal", nullable = false, foreignKey = @ForeignKey(name = "FK_usuario_sucursal"))
+	private Sucursal sucursal;
+	*/
+	@Size(min=1, message = "{nombre.notnull}")
+	@Column(name = "nombre", nullable = false, length = 50)
+	private String nombre;
+	
+	@Size(min=1, message = "{user.notnull}")
+	@Column(name = "user", nullable = false, length = 50)
+	private String user;
+	
+	/*
+	@Size(min=1, message = "{password.notnull}")
+	@Column(name = "password", nullable = false, length = 50)
+	private String password;
+
+	
+	*/
+	
+}

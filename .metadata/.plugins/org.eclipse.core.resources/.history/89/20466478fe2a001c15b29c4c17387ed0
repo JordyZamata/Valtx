@@ -1,0 +1,10 @@
+package com.valtx.seleccion.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.valtx.seleccion.model.Producto;
+import com.valtx.seleccion.model.repo.IGenericRepo;
+
+public interface IProductoRepo extends IGenericRepo<Producto, String>{
+
+}

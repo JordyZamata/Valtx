@@ -1,0 +1,10 @@
+package com.valtx.seleccion.exception;
+
+public class ModeloNotFoundException {
+
+	public ModeloNotFoundException(String message) {
+		super(message);
+	}
+
+	
+}

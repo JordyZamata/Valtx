@@ -1,0 +1,5 @@
+package com.valtx.seleccion.service.impl;
+
+public class CRUDImpl {
+
+}

@@ -1,0 +1,4 @@
+nombres.notnull=Nombre es requerido
+password.notnull=Nombre es requerido
+user.notnull=Nombre es requerido
+codigo.pattern=El codigo debe tener 2 caracteres

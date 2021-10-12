@@ -1,0 +1,7 @@
+package com.valtx.seleccion.service;
+
+import com.valtx.seleccion.model.Usuario;
+
+public interface IUsurioService extends ICRUD<Usuario, String>{
+
+} 

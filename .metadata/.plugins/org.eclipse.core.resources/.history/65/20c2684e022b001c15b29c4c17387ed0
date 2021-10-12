@@ -1,0 +1,29 @@
+package com.valtx.seleccion.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+
+@Entity
+@Table(name = "producto")
+public class Producto {
+
+	@Id
+	private String codProducto;
+
+	@Size(min=1, message = "Nombre no puede ser nulo")
+	@Column(name = "nombre", nullable = false, length = 50)
+	private String nombre;
+	
+	@Pattern(message = "El precio tiene que ser mayor a 0", regexp = "^(0*[1-9][0-9]*(\\.[0-9]+)?|0+\\.[0-9]*[1-9][0-9]*)$")
+	@Column(name = "precio", nullable = false, length = 50)
+	private double precio;
+
+	
+}

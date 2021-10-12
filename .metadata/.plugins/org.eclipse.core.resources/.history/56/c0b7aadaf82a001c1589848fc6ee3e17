@@ -1,0 +1,6 @@
+package com.valtx.seleccion.model;
+
+@Entity
+public class Producto {
+
+}

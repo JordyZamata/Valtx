@@ -1,0 +1,8 @@
+package com.valtx.seleccion.model.repo;
+
+
+import com.valtx.seleccion.model.Producto;
+
+public interface IProductoRepo extends IGenericRepo<Producto, String>{
+
+}

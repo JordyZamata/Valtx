@@ -1,0 +1,21 @@
+package com.valtx.seleccion.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "sucursal")
+public class Sucursal {
+
+	@Id
+	@Size(min = 2, max = 2, message = "{codigo.pattern}")
+	private String codSucursal;
+	
+	@Size(min=1, message = "{nombre.notnull}")
+	@Column(name = "nombre", nullable = false, length = 50)
+	private String nombre;
+	
+}
